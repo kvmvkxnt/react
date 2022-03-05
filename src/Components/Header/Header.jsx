@@ -1,6 +1,8 @@
 import './Header.scss';
 
-function Header({isActive = false}) {
+import PropTypes from 'prop-types';
+
+function Header({isActive}) {
     return (
         <>
             <header className='header'>
@@ -13,6 +15,14 @@ function Header({isActive = false}) {
             </header>
         </>
     )
+}
+
+Header.propTypes = {
+    isActive: PropTypes.bool,
+}
+
+Header.defaultProps = {
+    isActive: false,
 }
 
 export default Header;
