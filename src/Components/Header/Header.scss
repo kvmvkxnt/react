@@ -15,17 +15,27 @@
         width: 15px;
         height: 30px;
         font-size: 22px;
-        color: #e6e6e6;
+        color: rgba(0, 0, 0, 0.2);        ;
         transform: translate(100%, 50%) rotate(90deg);
 
         visibility: hidden;
         opacity: 0;
-        transition: visibility 0s, opacity 0.5s linear;
+        transition: visibility 0s, opacity 0.5s linear, color 0.2s ease-out;
 
         &--active {
             visibility: visible;
             opacity: 1;
             transition: visibility 0s, opacity 0.5s linear;
+        }
+
+        &:hover {
+            color: rgba(0, 0, 0, 0.5);
+            transition: color 0.2s ease-in;
+        }
+
+        &:active {
+            color: rgba(0, 0, 0, 1);
+            transition: color 0.2s ease;
         }
     }
 
