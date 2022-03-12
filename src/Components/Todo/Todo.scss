@@ -23,6 +23,34 @@
         text-decoration: line-through;
         transition: color 0.4s;
     }
+
+    &--unactive {
+        display: none;
+    }
+}
+
+.todo__input {
+    border: none;
+    max-width: 430px;
+    width: 100%;
+    line-height: 1.2;
+    font-size: 24px;
+    font-family: 'Helvetica Neue';
+    font-weight: 100;
+    padding: 15px 0;
+    margin: 0;
+}
+
+.todo__form {
+    display: none;
+    margin: 0;
+    padding: 0;
+    max-width: 430px;
+    width: 100%;
+
+    &--active {
+        display: block;
+    }
 }
 
 .todo__checker {

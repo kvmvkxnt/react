@@ -10,7 +10,10 @@ function Todo({title, id, isCompleted}) {
                     <input type="checkbox" className='todo__checkbox visually-hidden' data-todo-id={id} defaultChecked={isCompleted}/>
                     <span className="todo__check"></span>
                 </label>
-                <p className={`todo__task ${isCompleted ? 'todo__task--completed' : ''}`}>{title}</p>
+                <p className={`todo__task ${isCompleted ? 'todo__task--completed' : ''}`} data-todo-id={id}>{title}</p>
+                <form className='todo__form' data-todo-id={id}>
+                    <input type="text" className='todo__input'/>
+                </form>
                 <button className="todo__delete" data-todo-id={id}>×</button>
             </li>
         </>
