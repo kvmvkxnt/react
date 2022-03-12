@@ -9,3 +9,13 @@
     margin: 0;
     padding: 0;
 }
+
+.todo_list {
+    transition: all 0.5s ease;
+}
+
+.todo_list--dark {
+    background-color: black;
+    color: white;
+    transition: all 0.5s ease;
+}

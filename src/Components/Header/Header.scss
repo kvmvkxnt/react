@@ -48,10 +48,41 @@
         font-weight: 100;
         border: none;
         box-shadow: inset 0 -2px 1px rgb(0 0 0 / 3%);
+        transition: all 0.5s ease;
 
         &::placeholder {
             opacity: 0.2;
             font-style: italic;
+            transition: all 0.5s ease;
+        }
+    }
+    
+    &--dark {
+        .header__inner {
+            .header__input {
+                background-color: black;
+                color: white;
+                box-shadow: inset 0 -2px 1px rgb(255 255 255 / 97%);
+                transition: all 0.5s ease;
+            }
+
+            .header__input::placeholder {
+                color: white;
+                opacity: 0.6;
+                transition: all 0.5s ease;
+            }
+
+            .header__button {
+                color: rgba(255, 255, 255, 0.9);
+                transition: all 0.5s ease;
+
+                &--active {
+                    color: rgba(255, 255, 255, 0.9);
+                    opacity: 1;
+                    visibility: visible;
+                    transition: all 0.5s ease;
+                }
+            }
         }
     }
 }

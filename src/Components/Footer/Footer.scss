@@ -1,6 +1,7 @@
 .footer {
     border-top: 1px solid #e6e6e6;
     box-shadow: 0 1px 1px rgb(0 0 0 / 20%), 0 8px 0 -3px #f6f6f6, 0 9px 1px -3px rgb(0 0 0 / 20%), 0 16px 0 -6px #f6f6f6, 0 17px 2px -6px rgb(0 0 0 / 20%);
+    transition: all 0.5s ease;
 
     &__inner {
         display: flex;
@@ -12,6 +13,7 @@
         font-weight: 100;
         column-gap: 10px;
         padding: 10px 15px;
+        transition: all 0.5s ease;
     }
 
     &__clear {
@@ -23,7 +25,7 @@
         background-color: transparent;
         color: #777;
         cursor: pointer;
-        transition: text-decoration 0.2s ease, visiblity 0s, opacity 0.2s;
+        transition: text-decoration 0.2s ease, visiblity 0s, opacity 0.2s, color 0.5s ease;
 
         &:hover {
             text-decoration: underline;
@@ -48,5 +50,26 @@
         column-gap: 10px;
         display: flex;
         justify-content: space-between;
+    }
+
+    &--dark {
+        background-color: black;
+        box-shadow: 0 1px 1px rgb(255 255 255 / 80%), 0 8px 0 -3px #0c0b0b, 0 9px 1px -3px rgb(255 255 255 / 80%), 0 16px 0 -6px #0c0b0b, 0 17px 2px -6px rgb(255 255 255 / 80%); 
+        transition: all 0.5s ease;
+        
+        .footer__inner {
+            color: white;
+            transition: all 0.5s ease;
+
+            .footer__button {
+                color: white;
+                transition: all 0.5s ease;
+            }
+
+            .footer__clear {
+                color: white;
+                transition: all 0.5s ease;
+            }
+        }
     }
 }

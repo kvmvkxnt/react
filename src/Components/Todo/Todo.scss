@@ -5,6 +5,23 @@
     column-gap: 10px;
     padding: 0 5px;
     border-bottom: 1px solid #ededed;
+    transition: all 0.5s ease;
+
+    &--dark {
+        color: white;
+        transition: all 0.5s ease;
+
+        .todo__delete {
+            color: rgba(211, 70, 70, 1);
+            transition: all 0.5s ease;
+        }
+
+        .todo__check {
+            border: 1px solid white;
+            opacity: 0.8;
+            transition: all 0.5s ease;
+        }
+    }
 }
 
 .todo__task {

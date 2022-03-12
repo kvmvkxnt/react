@@ -1,11 +1,13 @@
 import './Todo.scss';
 import React from 'react';
 import PropTypes from 'prop-types';
+import {Context as ThemeContext} from '../../Context/Theme';
 
 function Todo({title, id, isCompleted}) {
+    const ctx = React.useContext(ThemeContext);
     return (
         <>
-            <li className="todo__item" data-todo-id={id}>
+            <li className={`todo__item ${ctx.theme === 'dark' ? 'todo__item--dark' : ''}`} data-todo-id={id}>
                 <label className="todo__checker">
                     <input type="checkbox" className='todo__checkbox visually-hidden' data-todo-id={id} defaultChecked={isCompleted}/>
                     <span className="todo__check"></span>
