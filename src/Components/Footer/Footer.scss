@@ -15,13 +15,15 @@
     }
 
     &__clear {
+        visibility: hidden;
+        opacity: 0;
         border: none;
         font-weight: 100;
         padding: 0;
         background-color: transparent;
         color: #777;
         cursor: pointer;
-        transition: text-decoration 0.2s ease;
+        transition: text-decoration 0.2s ease, visiblity 0s, opacity 0.2s;
 
         &:hover {
             text-decoration: underline;
@@ -31,6 +33,12 @@
         &:active {
             text-decoration: none;
             transition: text-decoration 0.2s ease;
+        }
+
+        &--active {
+            visibility: visible;
+            opacity: 1;
+            transition: visiblity 0s, opacity 0.2s;
         }
     }
 
