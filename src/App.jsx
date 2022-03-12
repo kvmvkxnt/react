@@ -43,8 +43,8 @@ function App() {
                 <select id="theme_switch" onChange={(evt)=>{
                     ctx.setTheme(evt.target.value);
                 }}>
-                    <option value="dark">Dark</option>
-                    <option value="light">Light</option>
+                    <option value="dark" selected={ctx.theme === 'dark' ? true : false}>Dark</option>
+                    <option value="light" selected={ctx.theme === 'light' ? true : false}>Light</option>
                 </select>
                 <div className="todo-app__inner">
                     <Header todos={todos} setTodos={setTodos} />
