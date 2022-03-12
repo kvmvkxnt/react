@@ -9,11 +9,13 @@ import './Components/Footer/Footer.scss';
 function App() {
     const [todos, setTodos] = React.useState([]);
 
-    if (JSON.parse(window.localStorage.getItem('todos'))) {
-        setTodos(JSON.parse(window.localStorage.getItem('todos')));
-    } else {
-        window.localStorage.setItem('todos', JSON.stringify(todos));
-    }
+    React.useEffect(() => {
+        if (JSON.parse(window.localStorage.getItem('todos'))) {
+            setTodos(JSON.parse(window.localStorage.getItem('todos')));
+        } else {
+            window.localStorage.setItem('todos', JSON.stringify(todos));
+        }
+    }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
     React.useEffect(() => {
         window.localStorage.setItem('todos', JSON.stringify(todos));
