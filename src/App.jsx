@@ -9,13 +9,11 @@ import './Components/Footer/Footer.scss';
 function App() {
     const [todos, setTodos] = React.useState([]);
 
-    React.useEffect(()=>{
-        if (JSON.parse(window.localStorage.getItem('todos'))) {
-            setTodos(JSON.parse(window.localStorage.getItem('todos')));
-        } else {
-            window.localStorage.setItem('todos', JSON.stringify(todos));
-        }
-    }, [todos]);
+    if (JSON.parse(window.localStorage.getItem('todos'))) {
+        setTodos(JSON.parse(window.localStorage.getItem('todos')));
+    } else {
+        window.localStorage.setItem('todos', JSON.stringify(todos));
+    }
 
     React.useEffect(() => {
         window.localStorage.setItem('todos', JSON.stringify(todos));
