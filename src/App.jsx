@@ -15,7 +15,7 @@ function App() {
         } else {
             window.localStorage.setItem('todos', JSON.stringify(todos));
         } 
-    }, []);
+    }, [null]);
 
     React.useEffect(() => {
         window.localStorage.setItem('todos', JSON.stringify(todos));
@@ -92,8 +92,8 @@ function App() {
                 <div className="todo-app__inner">
                     <header className='header'>
                         <div className="header__inner">
+                            <button className={'header__button'} onClick={handleFormClick}>❯</button>
                             <form className="header__task" onSubmit={handleSubmit}>
-                                <button className={'header__button'} onClick={handleFormClick}>❯</button>
                                 <input type="text" className="header__input" placeholder='What needs to be done?' />
                             </form>
                         </div>
