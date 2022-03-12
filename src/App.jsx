@@ -7,10 +7,14 @@ import Todo from './Components/Todo/Todo';
 import './Components/Footer/Footer.scss';
 
 function App() {
-    const [todos, setTodos] = React.useState([]);
+    const [todos, setTodos] = React.useState([{
+        id: 0,
+        title: 'Do something',
+        isCompleted: false,
+    }]);
 
     React.useEffect(() => {
-        if (JSON.parse(window.localStorage.getItem('todos'))) {
+        if (JSON.parse(window.localStorage.getItem('todos')) != []) {
             setTodos(JSON.parse(window.localStorage.getItem('todos')));
         } else {
             window.localStorage.setItem('todos', JSON.stringify(todos));
