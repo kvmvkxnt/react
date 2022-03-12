@@ -15,7 +15,7 @@ function App() {
         } else {
             window.localStorage.setItem('todos', JSON.stringify(todos));
         }
-    }, todos);
+    }, [todos]);
 
     React.useEffect(() => {
         window.localStorage.setItem('todos', JSON.stringify(todos));
