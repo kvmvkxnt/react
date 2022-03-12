@@ -10,13 +10,12 @@ function App() {
     const [todos, setTodos] = React.useState([]);
 
     React.useEffect(()=>{
-        const makeTodos = () => {if (JSON.parse(window.localStorage.getItem('todos'))) {
+        if (JSON.parse(window.localStorage.getItem('todos'))) {
             setTodos(JSON.parse(window.localStorage.getItem('todos')));
         } else {
             window.localStorage.setItem('todos', JSON.stringify(todos));
-        }} 
-        makeTodos();
-    }, []);
+        }
+    });
 
     React.useEffect(() => {
         window.localStorage.setItem('todos', JSON.stringify(todos));
